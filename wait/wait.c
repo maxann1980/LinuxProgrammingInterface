@@ -46,8 +46,6 @@ int main(int argc, char **argv) {
             printf("child exited, status=%d\n", WEXITSTATUS(status));
         } else if (WIFSIGNALED(status)) {
             printf("child killed by signal %d (%s)",  WTERMSIG(status), strsignal(WTERMSIG(status)));
-        } else if (WIFSIGNALED(status)) {
-            printf("child killed by signal %d (%s)",WTERMSIG(status), strsignal(WTERMSIG(status)));
         } else {
             printf("what happened to this child? (status=%x)\n",(unsigned int) status);
         }
